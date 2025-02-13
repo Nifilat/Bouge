@@ -23,7 +23,7 @@ export default function Home() {
     { image: '/photo1.jpg', text: 'Remember our first date?' },
     { image: '/photo2.JPG', text: 'All the laughs we shared...' },
     { image: '/photo3.jpg', text: 'The adventures we went on...' },
-    { image: '/photo4.jpg', text: 'And all the moments that made me fall for you...' },
+    { image: '/photo4.JPG', text: 'And all the moments that made me fall for you...' },
   ];
 
   useEffect(() => {
