@@ -175,7 +175,7 @@ export default function Home() {
                   onClick={handleAccept}
                   className="bg-pink-500 hover:bg-pink-600 text-white font-bold py-3 px-8 rounded-full text-xl transform hover:scale-110 transition-all duration-300 w-64"
                 >
-                  Yes, I'd love to! ❤️
+                  Yes, I&apos;d love to! ❤️
                 </button>
                 <button
                   onClick={handleNoClick}
