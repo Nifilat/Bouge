@@ -2,6 +2,7 @@
 'use client';
 import { useState, useEffect, useRef } from 'react';
 import { Heart, Music, MicOff } from 'lucide-react';
+import Image from 'next/image';
 
 export default function Home() {
   const [currentStage, setCurrentStage] = useState(0);
@@ -15,7 +16,7 @@ export default function Home() {
     'No',
     'Are you sure?',
     'Okay...',
-    "Yo yo yo I'm kidding 😂😂"
+    "Yo yo yo I&apos;m kidding 😂😂😂"
   ];
 
   const memories = [
@@ -121,17 +122,20 @@ export default function Home() {
                 🎉 Thank You Idanla! 🎉
               </h1>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                {memories.map((memory, index) => (
+              {memories.map((memory, index) => (
                   <div 
                     key={index} 
                     className="animate-scale-in bg-white rounded-lg shadow-lg overflow-hidden"
                     style={{ animationDelay: `${index * 0.2}s` }}
                   >
                     <div className="relative pt-[100%]">
-                      <img
+                      <Image
                         src={memory.image}
                         alt="Our memory"
-                        className="absolute top-0 left-0 w-full h-full object-contain bg-black"
+                        fill
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                        className="object-contain bg-black"
+                        priority={index === 0}
                       />
                     </div>
                   </div>
@@ -145,10 +149,13 @@ export default function Home() {
             <div className="memory-container">
               <div className="bg-white rounded-lg shadow-2xl overflow-hidden">
                 <div className="relative pt-[75%]">
-                  <img
+                  <Image
                     src={memories[currentStage].image}
                     alt="Memory"
-                    className="absolute top-0 left-0 w-full h-full object-contain bg-black"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 1024px"
+                    className="object-contain bg-black"
+                    priority
                   />
                 </div>
                 <div className="p-6 text-center">
