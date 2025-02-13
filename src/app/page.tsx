@@ -16,12 +16,12 @@ export default function Home() {
     'No',
     'Are you sure?',
     'Okay...',
-    "Yo yo yo I&apos;m kidding 😂😂😂"
+    "Yo yo yo I'm kidding 😂😂😂"
   ];
 
   const memories = [
     { image: '/photo1.jpg', text: 'Remember our first date?' },
-    { image: '/photo2.jpg', text: 'All the laughs we shared...' },
+    { image: '/photo2.JPG', text: 'All the laughs we shared...' },
     { image: '/photo3.jpg', text: 'The adventures we went on...' },
     { image: '/photo4.jpg', text: 'And all the moments that made me fall for you...' },
   ];
